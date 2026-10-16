@@ -13,6 +13,13 @@ python3 -m pip install -r requirements.txt
 
 macOS標準の `sips` を使うため、基本的にmacOS向けです。
 
+## 実行前のチェック
+
+- 写真とsidecar JSONの原本は別の場所にバックアップしてから処理してください。
+- 最初は少量の写真をコピーしたフォルダで試し、撮影日時・位置情報が期待どおり残るか確認してください。
+- 元HEICを削除する `--delete-heic` は、変換結果を確認してから使用してください。
+- `force_compress_jpgs.py` はJPGを上書きします。元の解像度や画質を維持したい場合は、先に `compress_jpgs.py` の `--dry-run` で対象を確認してください。
+
 ## 1. HEIC / JPG / 動画を1フォルダにまとめる
 
 ```bash
